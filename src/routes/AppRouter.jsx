@@ -6,7 +6,7 @@ import Create from "../components/Create"
 import Dashboard from "../components/Dashboard"
 import Blogs from "../components/Blogs"
 import Home from '../components/Home'
-import Header from '../components/header'
+import Header from '../components/Header'
  
  function AppRouter() {
    return <Routes>
