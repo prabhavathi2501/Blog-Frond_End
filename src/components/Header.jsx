@@ -35,10 +35,11 @@ function Header() {
             }
           </Nav>
           <Nav>
-          <Nav.Item><h5>{`${userData.firstName} ${userData.lastName}`}</h5></Nav.Item>
+          <Nav.Item style={{alignContent:"center"}}><h4>{`${userData.firstName} ${userData.lastName}`}</h4></Nav.Item>
             &nbsp;
             &nbsp;
-          <Nav.Item onClick={logout}><Button variant='danger'>Logout</Button></Nav.Item>
+            &nbsp;
+          <Nav.Item onClick={logout} ><Button variant='danger'>Logout</Button></Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

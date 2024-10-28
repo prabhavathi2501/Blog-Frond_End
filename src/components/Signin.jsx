@@ -37,15 +37,19 @@ navigate('/home')
     }
   }
   return <>
-    <div className='container'>
+    <div className='container' style={{background:""}}>
       <div className='row'>
-      <div className='col-3 p-2'>
-        <div >
-      <img src=' '></img></div>
+      <div className='col-6 p-2'>
+        <div>
+      <img src='/image/logo-no-background.png'  style={{width:"100%",borderRadius:"50%",background:"blue",border:"20px solid pink"}}></img></div>
       </div>
-        <div className='col-5 b-3'>
-    <h1 style={{textAlign:"center"}}>Login Here!</h1>
-      <Form>
+
+        <div className='col-5 b-3' style={{padding:"80px"}}>
+    <h2 style={{textAlign:"center",color:"blue"}}>Login Here!</h2>
+      <Form style=
+      {{border:"1px solid blue",
+      borderRadius:"10px",
+      padding:"20px 20px"}}>
         <Form.Group className="mb-3" >
           <Form.Label>Email </Form.Label>
           <Form.Control type="email" placeholder="Enter email" onChange={(e)=>setEmail(e.target.value)}/>
@@ -57,9 +61,10 @@ navigate('/home')
         <Button variant="primary"  onClick={handleLogin}>
           Submit
         </Button>
+        <p>Don't you have account?<a href='/SignUp'>Register </a>Here</p>
       </Form>
       </div>
-      <div className='col-2'></div>
+      {/* <div className=''></div> */}
       </div>
     </div>
   </>
