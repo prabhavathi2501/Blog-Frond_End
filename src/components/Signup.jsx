@@ -73,7 +73,7 @@ navigate('/signin')
         <Button variant="primary" style={{alignItems:"center"}}  onClick={handleLogin}>
           Submit
         </Button>
-      
+        &nbsp;
         <p style={{alignContent:"center"}}>Already have account?<a href='/'>Loging</a>Here</p>
       </Form>
       </div>
