@@ -1,8 +1,11 @@
-# React + Vite
+BlogApp is a web application designed to allow users to create, read, update, and  blog posts. It provides a user-friendly interface for managing blog content efficiently.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Read Posts: Once approved by the admin, blogs will be visible to everyone for reading.
+User Authentication: Users can sign up, log in, and log out securely to manage their blog posts.[username:prabha2501@gmail.com,password:2501] Create Posts: Authenticated users can create new blog posts with a title, content, and optional image. **Read Posts: **Visitors can browse through existing blog posts to read the content.
 
-Currently, two official plugins are available:
+Read Posts: Once approved by the admin, blogs will be visible to everyone for reading.[admin username:prabha2501@gmail.com,password:2501]
+Update Posts: Authors can edit and update their existing blog posts.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Technologies Used Frontend: HTML CSS (Bootstrap for styling) JavaScript React
+
+Deployed URL :"https://blogslogs.netlify.app/"
