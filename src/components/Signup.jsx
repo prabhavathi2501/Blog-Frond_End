@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import {toast} from 'react-toastify'
 import AxiosService from '../utils/ApiService'
 import { useNavigate } from 'react-router-dom';
+import Card from "react-bootstrap/Card"
 
 
 function Signup() {
@@ -47,10 +48,11 @@ navigate('/signin')
       </div>
       
      <div className='col-4 b-3 'style={{padding:"10px 0"}}>
-    <h3 style={{textAlign:"center",color:"blue"}}>Register Here!</h3>
-      <Form style={{border:"1px solid blue",
+    <h3 style={{textAlign:"center",color:"blue",marginRight:"40px"}}>Register Here!</h3>
+    <Card style={{width:"300px"}}>
+      <Form style={{
         padding:"20px 10px",
-       borderRadius:"10px",width:"400px",
+       borderRadius:"10px",width:"300px",
       }}>
       <Form.Group className="mb-3" >
           <Form.Label>firstname </Form.Label>
@@ -61,7 +63,7 @@ navigate('/signin')
           <Form.Control type="lastname" placeholder="Last Name" onChange={(e)=>setLastname(e.target.value)}/>
          </Form.Group>
         
-        <Form.Group className="mb-3" style={{border:"1px solid block"}}>
+        <Form.Group className="mb-3" >
           <Form.Label >email </Form.Label>
           <Form.Control type="email" placeholder="email" onChange={(e)=>setEmail(e.target.value)}/>
          </Form.Group>
@@ -70,12 +72,13 @@ navigate('/signin')
           <Form.Control type="firstname" placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
          </Form.Group>
 
-        <Button variant="primary" style={{alignItems:"center"}}  onClick={handleLogin}>
+        <Button variant="primary" style={{marginLeft:"80px"}}  onClick={handleLogin}>
           Submit
         </Button>
         &nbsp;
         <p style={{alignContent:"center"}}>Already have account?<a href='/'>Loging</a>Here</p>
       </Form>
+      </Card>
       </div>
       {/* <div className='col-'></div> */}
       </div>
