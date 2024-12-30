@@ -6,6 +6,7 @@ import AxiosService from '../utils/ApiService';
 import { useNavigate } from 'react-router-dom';
 import useLogout from '../hooks/useLogout';
 import { toast } from 'react-toastify';
+import Card from "react-bootstrap/Card"
 function Create() {
   let [title,setTitle] = useState("")
   let [imageUrl,setImage] = useState("")
@@ -35,6 +36,7 @@ function Create() {
         <div className='col-8'>
     <h3 style={{textAlign:"center"}}>Share Your Thoughts!</h3>
     <Form>
+    <Card className='craete-Card'>
       <Form.Group className="mb-3">
         <Form.Label>Title</Form.Label>
         <Form.Control type="text" placeholder="Enter Title"  onChange={(e)=>setTitle(e.target.value)}/>
@@ -49,6 +51,7 @@ function Create() {
         <Form.Label>Description</Form.Label>
         <Form.Control as="textarea" placeholder="Description" style={{ height: '100px' }} onChange={(e)=>setDescription(e.target.value)}/>
       </Form.Group>
+      </Card>
 
         <h2 style={{textAlign:"center"}}>Preview</h2>
         <div className='blogs-wrappers'>
@@ -59,7 +62,9 @@ function Create() {
           Submit
         </Button>
        </div>
+      
      </Form>
+   
      </div>
      
     </div>

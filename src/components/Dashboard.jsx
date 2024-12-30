@@ -31,7 +31,7 @@ function Dashboard() {
     getBlogs()
   },[])
 
-  return <div className='container-fluid p-6'>
+  return <div className='container-fluid p-6 table-blog'>
     <Table striped bordered hover>
       <thead>
         <tr>

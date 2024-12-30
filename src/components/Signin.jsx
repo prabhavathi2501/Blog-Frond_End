@@ -4,7 +4,8 @@ import Form from 'react-bootstrap/Form';
 import {toast} from 'react-toastify'
 import AxiosService from '../utils/ApiService'
 import { useNavigate } from 'react-router-dom';
-import Card from "react-bootstrap/Card"
+import Card from "react-bootstrap/Card";
+import { ImBlogger2 } from "react-icons/im";
 
 
 function Signin() {
@@ -38,20 +39,28 @@ navigate('/home')
     }
   }
   return <>
-    <div className='container' style={{background:""}}>
+    <div className='container-fluid' style={{background:"blue",width:"auto",height:"100vh",overflow:"hidden"}}>
       <div className='row'>
       <div className='col-6 p-2'>
-        <div>
-      <img src='/image/logo-no-background.png'  style={{width:"100%",borderRadius:"50%",background:"blue",border:"20px solid pink"}}></img></div>
+        <h2><ImBlogger2 className='icon' />Blogs</h2>
+        <div className='heading-singn'>
+        <h1 className="text-white fw-bolder mt-5">Hang onto your memories </h1>
+        <p className="text-white">
+          Save the moments that matter.Blogger lets you safely store thousands
+          of posts, photos, and more with Google.
+        </p>
+      {/* <img src='/image/logo-no-background.png'  style={{width:"100%",borderRadius:"50%",background:"blue",border:"20px solid pink"}}></img> */}
+      </div>
       </div>
 
         <div className='col-5 b-3' style={{padding:"80px"}}>
-    <h2 style={{textAlign:"center",color:"blue"}}>Login Here!</h2>
+   
     <Card>
       <Form style=
       {{
       borderRadius:"10px",
-      padding:"20px 20px"}}>
+      padding:"40px 20px"}}>
+         <h2 style={{textAlign:"center",color:"blue"}}>Login Here!</h2>
         <Form.Group className="mb-3" >
           <Form.Label>Email </Form.Label>
           <Form.Control type="email" placeholder="Enter email" onChange={(e)=>setEmail(e.target.value)}/>

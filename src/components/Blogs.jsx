@@ -7,6 +7,7 @@ import AxiosService from '../utils/ApiService'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
+import Card from "react-bootstrap/Card"
 
 function Blog() {
   let logout = useLogout()
@@ -76,7 +77,9 @@ function EditBlog(){
     }
   }
   return <>
-    <Form>
+  <div className='form-blog'>
+    <Form >
+      <Card className='edit-blog'>
       <Form.Group className="mb-3">
         <Form.Label>Title</Form.Label>
         <Form.Control type="text" value={title} placeholder="Enter Title"  onChange={(e)=>setTitle(e.target.value)}/>
@@ -91,7 +94,9 @@ function EditBlog(){
         <Form.Label>Description</Form.Label>
         <Form.Control as="textarea" value={description} placeholder="Description" style={{ height: '100px' }} onChange={(e)=>setDescription(e.target.value)}/>
       </Form.Group>
-
+      </Card>
+      </Form>
+      </div>
         <h2 style={{textAlign:"center"}}>Preview</h2>
         <div className='blogs-wrapper'>
           <BlogTile blog={{title,imageUrl,description}}/>
@@ -103,7 +108,8 @@ function EditBlog(){
         &nbsp;
         <Button variant='warning' onClick={()=>navigate('/dashboard')}>Cancel</Button>
       </div>
-    </Form>
+      
+  
   </>
 }
 
